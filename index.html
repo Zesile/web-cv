@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Резюме" />
+    <title>CV — Тітарчук Дмитро Васильович</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      ::selection {
+        background: #c2374f;
+        color: #ffffff;
+      }
+
+      @media print {
+        nav {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Тітарчук Дмитро Васильович</h1>
+      <p class="role" style="letter-spacing: 0.04em">Junior веброзробник</p>
+      <nav>
+        <ul>
+          <li><a href="#about">Про мене</a></li>
+          <li><a href="#experience">Досвід роботи</a></li>
+          <li><a href="#education">Освіта</a></li>
+          <li><a href="#skills">Навички</a></li>
+          <li><a href="#contacts">Контакти</a></li>
+          <li><a href="#reviews">Відгуки</a></li>
+        </ul>
+      </nav>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">Темна тема</button>
+    </header>
+
+    <main>
+      <section id="about">
+        <h2>Про мене</h2>
+        <p>
+          Я студент Національного університету "Львівська політехніка", який цікавиться веброзробкою.
+          Вивчаю <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, а також 
+          <strong>Python</strong> та <strong>C#</strong>. Прагну створювати зручні та доступні вебзастосунки.
+        </p>
+      </section>
+
+      <section id="experience">
+        <h2>Досвід роботи</h2>
+
+        <article>
+          <h3>Фріланс-проєкти</h3>
+          <p class="job-meta"><em>Самозайнятість</em> — <time class="period" datetime="2026-01">січень 2026</time> – дотепер</p>
+          <ul>
+            <li>Створення односторінкових сайтів для малого бізнесу.</li>
+            <li>Підтримка та оновлення контенту.</li>
+            <li>Робота з Git та командою через GitHub.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="education">
+        <h2>Освіта</h2>
+        <article>
+          <h3>2 курс, Кібербезпека</h3>
+          <p>Національний університет «Львівська політехніка», 2025 – 2027</p>
+        </article>
+      </section>
+
+      <section id="skills">
+        <h2>Навички</h2>
+        <ul class="skills-list">
+          <li>HTML5</li>
+          <li>Git та GitHub</li>
+          <li>Python(базовий рівень), C#(базовий рівень)</li>
+          <li>Англійська — C1</li>
+        </ul>
+      </section>
+
+      <section id="reviews">
+        <h2>Відгуки</h2>
+        <div id="reviews-list">
+          <p>Завантаження відгуків…</p>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contacts">
+      <h2>Контакти</h2>
+      <address>
+        <p>Email: <a href="mailto:dmytro.titarchuk.kb.2025@lpnu.ua">dmytro.titarchuk.kb.2025@lpnu.ua</a></p>
+        <p>GitHub: <a href="https://github.com/Zesile" target="_blank" rel="noopener noreferrer">github.com/Zesile</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/тітарчук-дмитро/" target="_blank" rel="noopener noreferrer">linkedin.com/in/Тітарчук-Дмитро</a></p>
+      </address>
+      <div id="system-info">
+        <h3>Системна інформація</h3>
+      </div>
+      <p><small>&copy; 2026 Тітарчук Дмитро Васильович</small></p>
+    </footer>
+    
+    <div id="contact-modal" class="modal" hidden>
+      <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+        <h2 id="contact-title">Зворотний зв’язок</h2>
+        <form action="https://formspree.io/f/xaeerkjk" method="POST">
+          <label for="f-name">Ім’я</label>
+          <input id="f-name" name="name" type="text" required autocomplete="name" />
+
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" required autocomplete="email" />
+
+          <label for="f-phone">Номер телефону</label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel" />
+
+          <label for="f-message">Повідомлення</label>
+          <textarea id="f-message" name="message" rows="4" required></textarea>
+
+          <div class="modal-actions">
+            <button type="submit">Надіслати</button>
+            <button type="button" id="contact-close">Закрити</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
